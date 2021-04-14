@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Page View Controller-->
+        <scene sceneID="3t2-4K-Q5y">
+            <objects>
+                <viewController storyboardIdentifier="MainPage" id="Kpx-CC-0nM" customClass="MainPageViewController" customModule="RickAndMortyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W1G-Nx-BVQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Beb-fG-HwQ">
+                                <rect key="frame" x="0.0" y="83" width="414" height="813"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FFx-ac-SKC">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="zE2-vb-cvY">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="uGh-ap-Gbd">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Mg3-t1-UtK">
+                                <rect key="frame" x="0.0" y="44" width="414" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="26I-op-gMK"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="List"/>
+                                    <segment title="Grid"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WgC-U1-y6E">
+                                <rect key="frame" x="312" y="760" width="82" height="82"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="82" id="2U8-zF-cVn"/>
+                                    <constraint firstAttribute="width" constant="82" id="elX-v2-ker"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="filterButton2"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JsY-G5-gf6"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Beb-fG-HwQ" secondAttribute="bottom" id="1Lq-Mf-w1T"/>
+                            <constraint firstItem="Beb-fG-HwQ" firstAttribute="top" secondItem="Mg3-t1-UtK" secondAttribute="bottom" constant="8" symbolic="YES" id="2QJ-eP-As8"/>
+                            <constraint firstItem="Mg3-t1-UtK" firstAttribute="trailing" secondItem="JsY-G5-gf6" secondAttribute="trailing" id="GEg-9O-VVX"/>
+                            <constraint firstItem="JsY-G5-gf6" firstAttribute="bottom" secondItem="WgC-U1-y6E" secondAttribute="bottom" constant="20" id="Llt-7p-x6Y"/>
+                            <constraint firstItem="Mg3-t1-UtK" firstAttribute="top" secondItem="JsY-G5-gf6" secondAttribute="top" id="VMX-n8-HJP"/>
+                            <constraint firstItem="Mg3-t1-UtK" firstAttribute="leading" secondItem="JsY-G5-gf6" secondAttribute="leading" id="aFq-zq-hFA"/>
+                            <constraint firstItem="Beb-fG-HwQ" firstAttribute="trailing" secondItem="JsY-G5-gf6" secondAttribute="trailing" id="gcZ-Ti-RlU"/>
+                            <constraint firstItem="JsY-G5-gf6" firstAttribute="trailing" secondItem="WgC-U1-y6E" secondAttribute="trailing" constant="20" id="gs0-qx-PER"/>
+                            <constraint firstItem="Beb-fG-HwQ" firstAttribute="leading" secondItem="JsY-G5-gf6" secondAttribute="leading" id="qvK-0y-cou"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="Beb-fG-HwQ" id="Wh1-BY-Uf2"/>
+                        <outlet property="filterButton" destination="WgC-U1-y6E" id="UHl-iW-9Mc"/>
+                        <outlet property="segmentedControl" destination="Mg3-t1-UtK" id="agl-8D-myj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IXy-pW-MQ6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-330.43478260869568" y="102.45535714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="filterButton2" width="82" height="82"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
